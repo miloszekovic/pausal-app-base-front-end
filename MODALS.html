@@ -1,0 +1,568 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="sr"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="sr"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="sr"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Pausal</title>
+    
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="initial-scale=1.0; user-scalable=no" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="theme-color" content="#6e7883">
+    
+    <meta name="description" content="Pausal" />
+    <meta name="robots" content="index, follow" />
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+    
+    <link href="css/layout.min.css" rel="stylesheet" />
+    
+    <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/1f14ff2b-fed1-4943-bf97-ca727a05eb83.css"/>
+    
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+    
+    <link rel="shortcut icon" type="image/x-icon" href="images/ui/favicon.ico">
+    <link rel="apple-touch-icon" sizes="72×72" href="images/ui/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="114×114" href="images/ui/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="images/ui/apple-touch-icon.png"/>
+</head>
+
+    <body>
+        
+        <div id="wrapper" style="padding:50px; line-height:30px;">
+        
+        	<h1>SVI MODALI</h1>
+            <p>Sadrzaj za modale koji se otvaraju sa DESNE STRANE se stavlja u DIV <strong>hidden-elements</strong> koji se nalazi na dnu stranice iznad zatvorenog BODY-ja.<br /><br />
+            Sadrzaj za male modale koji se CENTRALNO otvaraju isto ide iznad zatvorenog BODY-ja bez wrappera.<br /><br />U linkovima se vidi kako se pozivaju.</p>
+            
+            <br /><br />
+            <h2>POMOC FAQ</h2>
+            <a href="#kontakt" class="inline">Desni - Kontaktiraj podršku / kontakt</a>
+            
+            <br /><br />
+            <h2>JEDNA FAKTURA</h2>
+            <a href="#posalji-fakturu" class="inline">Desni - Posalji fakturu</a><br />
+            <a href="#dodaj-komitenta" class="inline">Desni - Dodaj komitenta</a><br />
+            <a href="#uredi-komitenta" class="inline">Desni - Edituj komitenta</a><br />
+            <a href="#stampaj-fakturu" class="easy-modal-open">Centrirani - Stampaj fakturu</a>
+            
+            <br /><br />
+            <h2>NALOZI ZA PRENOS</h2>
+            <a href="#pausalni-nalozi-za-prenos" class="easy-modal-open">Centrirani - Pausalni nalozi za prenos</a><br />
+            <a href="#generisanje-naloga-za-prenos" class="easy-modal-open">Centrirani - Generisanje naloga za prenos</a><br />
+            <a href="#da-li-ste-dobili-poresko-resenje" class="easy-modal-open">Centrirani - Poresko resenje DA NE</a><br />
+            <a href="#da-li-ste-dobili-poresko-resenje-ne" class="easy-modal-open">Centrirani - Poresko resenje NE</a>
+            
+            <br /><br />
+            <h2>ZDRAVSTVENE KNJIZICE</h2>
+            <a href="#brisanje-zdravstvene-knjizice" class="easy-modal-open">Centrirani - Brisanje</a><br />
+            <a href="#obnovi-zdravstvenu-knjizicu" class="inline">Desni - Obnovi zdravstvenu knjizicu</a><br />
+            <a href="#uredi-zdravstvenu-knjizicu" class="inline">Desni - Uredi zdravstvenu knjizicu</a><br />
+            <a href="#dodaj-zdravstvenu-knjizicu" class="inline">Desni - Dodaj zdravstvenu knjizicu</a>
+            
+        </div>
+
+        <!-- hidden forms for right modals -->
+        <div class="hidden-elements">
+        
+        	<!-- POMOC FAQ KONTAKT -->
+        	<div id="kontakt" class="modal-content">
+                <h2>Kontakt korisnicke podrske</h2>
+                <p>Korisnicka podrska ce vam u najkracem roku odgovoriti na mail
+ili vas pozvati na telefon.</p>
+                <form id="modal-kontakt" name="modal-kontakt" action="" method="GET">
+                <ul>
+                    <li>
+                        <label for="naslov">Naslov</label>
+                        <input id="naslov" type="text" name="naslov" value="" />
+                    </li>
+                    <li>
+                        <label for="poruka">Poruka</label>
+                        <textarea id="poruka" name="poruka"></textarea>
+                    </li>
+                    <li class="pushes">
+                        <div class="progress-button elastic">
+                            <button type="submit" value="Pošalji"><span>Pošalji</span></button>
+                            <svg class="progress-circle" width="70" height="70"><path style="stroke-dasharray: ; stroke-dashoffset: 204.243;" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"></path></svg>
+                            <svg class="checkmark" width="63" height="63"><path style="stroke-dasharray: 27.7908; stroke-dashoffset: 27.7908;" d="m31.5,46.5l15.3,-23.2"></path><path style="stroke-dasharray: 11.0752; stroke-dashoffset: 11.0752;" d="m31.5,46.5l-8.5,-7.1"></path></svg>
+                            <svg class="cross" width="63" height="63"><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l-9.3,-9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l9.3,9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l-9.3,9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l9.3,-9.3"></path></svg>
+                        </div>
+                    </li>
+                </ul>
+                </form>
+            </div>
+        	<!-- end POMOC FAQ KONTAKT -->
+        
+        	<!-- JEDNA FAKTURA - POSALJI FAKTURU -->
+            <div id="posalji-fakturu" class="modal-content">
+                <h2>Pošalji fakturu</h2>
+                <p>Slanjem faktura postaje zvanicna i vezuje se za KPO *.</p>
+                <form id="modal-posalji-fakturu" name="modal-posalji-fakturu" action="" method="GET">
+                <ul>
+                    <li>
+                        <label for="datum">Datum</label>
+                        <input id="datum" type="text" name="datum" class="datepicker" value="" />
+                    </li>
+                    <li>
+                        <label for="email">Primalac</label>
+                        <input id="email" type="text" name="email" value="" />
+                    </li>
+                    <li>
+                        <label for="naslov">Naslov</label>
+                        <input id="naslov" type="text" name="naslov" value="" />
+                    </li>
+                    <li>
+                        <label for="poruka">Poruka</label>
+                        <textarea id="poruka" name="poruka"></textarea>
+                    </li>
+                    <li class="pdf">
+                        <div>
+                            <span><i class="fa fa-paperclip"></i></span> Pdf fakture je u prilogu
+                        </div>
+                        <div class="right-block">
+                            <input id="posalji-meni" type="checkbox" name="posalji-meni" value="" />
+                            <label for="posalji-meni">Posalji i meni kopiju</label>
+                        </div>
+                    </li>
+                    <li class="pushes">
+                        <div class="progress-button elastic">
+                            <button type="submit" value="Pošalji"><span>Pošalji</span></button>
+                            <svg class="progress-circle" width="70" height="70"><path style="stroke-dasharray: ; stroke-dashoffset: 204.243;" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"></path></svg>
+                            <svg class="checkmark" width="63" height="63"><path style="stroke-dasharray: 27.7908; stroke-dashoffset: 27.7908;" d="m31.5,46.5l15.3,-23.2"></path><path style="stroke-dasharray: 11.0752; stroke-dashoffset: 11.0752;" d="m31.5,46.5l-8.5,-7.1"></path></svg>
+                            <svg class="cross" width="63" height="63"><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l-9.3,-9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l9.3,9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l-9.3,9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l9.3,-9.3"></path></svg>
+                        </div>
+                    </li>
+                </ul>
+                </form>
+            </div>
+            <!-- end JEDNA FAKTURA - POSALJI FAKTURU -->
+            
+            <!-- JEDNA FAKTURA - DODAJ KOMITENTA -->
+            <div id="dodaj-komitenta" class="modal-content">
+                <h2>Dodaj komitenta</h2>
+                <p>Dodajte stranku sa kojom saradjujete blabla fakture.</p>
+                <form id="modal-dodaj-komitenta" name="modal-dodaj-komitenta" action="" method="GET">
+                <ul>
+                    <li>
+                        <label for="ime">Ime</label>
+                        <input id="ime" type="text" name="ime" value="" />
+                    </li>
+                    <li>
+                        <label for="pib">PIB</label>
+                        <input id="pib" type="text" name="pib" value="" />
+                    </li>
+                    <li>
+                        <label for="telefon">Telefon</label>
+                        <input id="telefon" type="text" name="telefon" value="" />
+                    </li>
+                    <li>
+                        <label for="email">E-mail</label>
+                        <input id="email" type="text" name="email" value="" />
+                    </li>
+                    <li>
+                        <label for="adresa">Adresa</label>
+                        <input id="adresa" type="text" name="adresa" value="" />
+                    </li>
+                    <li>
+                        <label for="grad">Grad</label>
+                        <input id="grad" type="text" name="grad" value="" />
+                    </li>
+                    <li class="pushes">
+                        <div class="progress-button elastic right-block">
+                            <button type="submit" value="Sačuvaj" class="bg-none"><span>Sačuvaj</span></button>
+                            <svg class="progress-circle" width="70" height="70"><path style="stroke-dasharray: ; stroke-dashoffset: 204.243;" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"></path></svg>
+                            <svg class="checkmark" width="63" height="63"><path style="stroke-dasharray: 27.7908; stroke-dashoffset: 27.7908;" d="m31.5,46.5l15.3,-23.2"></path><path style="stroke-dasharray: 11.0752; stroke-dashoffset: 11.0752;" d="m31.5,46.5l-8.5,-7.1"></path></svg>
+                            <svg class="cross" width="63" height="63"><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l-9.3,-9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l9.3,9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l-9.3,9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l9.3,-9.3"></path></svg>
+                        </div>
+                    </li>
+                </ul>
+                </form>
+            </div>
+            <!-- end JEDNA FAKTURA - DODAJ KOMITENTA -->
+            
+            <!-- JEDNA FAKTURA - EDITUJ KOMITENTA -->
+            <div id="uredi-komitenta" class="modal-content">
+                <h2>Uredi komitenta</h2>
+                <p>Coca Cola corporation</p>
+                <form id="modal-uredi-komitenta" name="modal-uredi-komitenta" action="" method="GET">
+                <ul>
+                    <li>
+                        <label for="ime">Ime</label>
+                        <input id="ime" type="text" name="ime" value="" />
+                    </li>
+                    <li>
+                        <label for="pib">PIB</label>
+                        <input id="pib" type="text" name="pib" value="" />
+                    </li>
+                    <li>
+                        <label for="telefon">Telefon</label>
+                        <input id="telefon" type="text" name="telefon" value="" />
+                    </li>
+                    <li>
+                        <label for="email">E-mail</label>
+                        <input id="email" type="text" name="email" value="" />
+                    </li>
+                    <li>
+                        <label for="adresa">Adresa</label>
+                        <input id="adresa" type="text" name="adresa" value="" />
+                    </li>
+                    <li>
+                        <label for="grad">Grad</label>
+                        <input id="grad" type="text" name="grad" value="" />
+                    </li>
+                    <li class="pushes">
+                    	<a href="#" class="kom-delete"><i class="fa fa-trash-o"></i> Obriši komitenta</a>
+                        
+                        <div class="progress-button elastic right-block top-block">
+                            <button type="submit" value="Sačuvaj" class="bg-none"><span>Sačuvaj</span></button>
+                            <svg class="progress-circle" width="70" height="70"><path style="stroke-dasharray: ; stroke-dashoffset: 204.243;" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"></path></svg>
+                            <svg class="checkmark" width="63" height="63"><path style="stroke-dasharray: 27.7908; stroke-dashoffset: 27.7908;" d="m31.5,46.5l15.3,-23.2"></path><path style="stroke-dasharray: 11.0752; stroke-dashoffset: 11.0752;" d="m31.5,46.5l-8.5,-7.1"></path></svg>
+                            <svg class="cross" width="63" height="63"><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l-9.3,-9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l9.3,9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l-9.3,9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l9.3,-9.3"></path></svg>
+                        </div>
+                    </li>
+                </ul>
+                </form>
+            </div>
+            <!-- end JEDNA FAKTURA - EDITUJ KOMITENTA -->
+            
+            <!-- ZDRAVSTVENE KNJIZICE - Obnovi zdravstvenu knjizicu -->
+            <div id="obnovi-zdravstvenu-knjizicu" class="modal-content">
+                <h2>Obnovi zdravstvenu knjižicu</h2>
+                <p>Da biste obnovili zdravstvenu knjizicu potreban vam je samo zahtev da od poreske dobijete potvrdu od placenim porezima.</p>
+                <form id="modal-obnovi-zdravstvenu-knjizicu" name="modal-obnovi-zdravstvenu-knjizicu" action="" method="GET">
+                <div class="long-progress">
+                    <div class="progress-button elastic">
+                        <button type="submit" value="Skini Obrazac za zahtev Obnove" class="bg-none"><span>Skini Obrazac za zahtev Obnove</span></button>
+                        <svg class="progress-circle" width="70" height="70"><path style="stroke-dasharray: ; stroke-dashoffset: 204.243;" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"></path></svg>
+                        <svg class="checkmark" width="63" height="63"><path style="stroke-dasharray: 27.7908; stroke-dashoffset: 27.7908;" d="m31.5,46.5l15.3,-23.2"></path><path style="stroke-dasharray: 11.0752; stroke-dashoffset: 11.0752;" d="m31.5,46.5l-8.5,-7.1"></path></svg>
+                        <svg class="cross" width="63" height="63"><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l-9.3,-9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l9.3,9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l-9.3,9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l9.3,-9.3"></path></svg>
+                    </div>
+                </div>
+                </form>
+            </div>
+            <!-- END ZDRAVSTVENE KNJIZICE - Obnovi zdravstvenu knjizicu -->
+            
+            <!-- ZDRAVSTVENE KNJIZICE - EDIT KNJIZICE -->
+            <div id="uredi-zdravstvenu-knjizicu" class="modal-content">
+                <h2>Uredi zdravstvenu knjižicu</h2>
+                <p>Knjizica uskoro istice, proverite da li su podaci tacni.</p>
+                <form id="modal-uredi-zdravstvenu-knjizicu" name="modal-uredi-zdravstvenu-knjizicu" action="" method="GET">
+                <ul>
+                    <li>
+                        <label for="opstina">Tip osiguranika</label>
+                        <select class="custom" data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": false}'>
+                          <option value="Nosilac osiguranja">Nosilac osiguranja</option>
+                          <option value="Supružnik">Supružnik</option>
+                          <option value="Dete">Dete</option>
+                       </select>
+                    </li>
+                    <li class="im-pr">
+                        <div>
+                            <label for="ime">Ime</label>
+                            <input id="ime" type="text" name="ime" value="" />
+                        </div>
+                        <div>
+                            <label for="prezime">Prezime</label>
+                            <input id="prezime" type="text" name="prezime" value="" />
+                        </div>
+                    </li>
+                    <li>
+                        <label for="jmbg">JMBG</label>
+                        <input id="jmbg" type="text" name="jmbg" />
+                    </li>
+                    <li>
+                        <label for="adresa">Adresa</label>
+                        <input id="adresa" type="text" name="adresa" value="" />
+                    </li>
+                    <li>
+                        <label for="opstina">Opština</label>
+                        <input id="opstina" type="text" name="opstina" value="" />
+                    </li>
+                    <li>
+                        <label for="grad">Grad</label>
+                        <input id="grad" type="text" name="grad" value="" />
+                    </li>
+                    <li class="pushes">
+                    	<a href="#" class="kom-delete"><i class="fa fa-trash-o"></i> Obriši komitenta</a>
+                        
+                        <div class="progress-button elastic right-block top-block">
+                            <button type="submit" value="Sačuvaj" class="bg-none"><span>Sačuvaj</span></button>
+                            <svg class="progress-circle" width="70" height="70"><path style="stroke-dasharray: ; stroke-dashoffset: 204.243;" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"></path></svg>
+                            <svg class="checkmark" width="63" height="63"><path style="stroke-dasharray: 27.7908; stroke-dashoffset: 27.7908;" d="m31.5,46.5l15.3,-23.2"></path><path style="stroke-dasharray: 11.0752; stroke-dashoffset: 11.0752;" d="m31.5,46.5l-8.5,-7.1"></path></svg>
+                            <svg class="cross" width="63" height="63"><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l-9.3,-9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l9.3,9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l-9.3,9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l9.3,-9.3"></path></svg>
+                        </div>
+                    </li>
+                </ul>
+                </form>
+            </div>
+            <!-- END ZDRAVSTVENE KNJIZICE - EDIT KNJIZICE -->
+            
+            <!-- ZDRAVSTVENE KNJIZICE - DODAJ KNJIZICU -->
+            <div id="dodaj-zdravstvenu-knjizicu" class="modal-content">
+                <h2>Dodaj zdravstvenu knjižicu</h2>
+                <p>Dodajte zdravstvene knjizice sa sebe i porodicu.</p>
+                <form id="modal-dodaj-zdravstvenu-knjizicu" name="modal-dodaj-zdravstvenu-knjizicu" action="" method="GET">
+                <ul>
+                    <li>
+                        <label for="opstina">Tip osiguranika</label>
+                        <select class="custom" data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": false}'>
+                          <option value="Nosilac osiguranja">Nosilac osiguranja</option>
+                          <option value="Supružnik">Supružnik</option>
+                          <option value="Dete">Dete</option>
+                       </select>
+                    </li>
+                    <li class="im-pr">
+                        <div>
+                            <label for="ime">Ime</label>
+                            <input id="ime" type="text" name="ime" value="" />
+                        </div>
+                        <div>
+                            <label for="prezime">Prezime</label>
+                            <input id="prezime" type="text" name="prezime" value="" />
+                        </div>
+                    </li>
+                    <li>
+                        <label for="jmbg">JMBG</label>
+                        <input id="jmbg" type="text" name="jmbg" value="" />
+                    </li>
+                    <li>
+                        <label for="adresa">Adresa</label>
+                        <input id="adresa" type="text" name="adresa" value="" />
+                    </li>
+                    <li>
+                        <label for="opstina">Opština</label>
+                        <input id="opstina" type="text" name="opstina" value="" />
+                    </li>
+                    <li>
+                        <label for="grad">Grad</label>
+                        <input id="grad" type="text" name="grad" value="" />
+                    </li>
+                </ul>
+                <p>Klikom na dodaj knjizicu automatski ce se download-ovati i poslati na vas mail kopije obrasca koji nosite u medicinu rada zarad dobijanja knjzice.</p>
+                <div class="long-progress">
+                    <!-- kada je submitacija prosla -->
+                    <div class="progress-button elastic">
+                        <button type="submit" value="Dodaj knjižicu" class="bg-none"><span>Dodaj knjižicu</span></button>
+                        <svg class="progress-circle" width="70" height="70"><path style="stroke-dasharray: ; stroke-dashoffset: 204.243;" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"></path></svg>
+                        <svg class="checkmark" width="63" height="63"><path style="stroke-dasharray: 27.7908; stroke-dashoffset: 27.7908;" d="m31.5,46.5l15.3,-23.2"></path><path style="stroke-dasharray: 11.0752; stroke-dashoffset: 11.0752;" d="m31.5,46.5l-8.5,-7.1"></path></svg>
+                        <svg class="cross" width="63" height="63"><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l-9.3,-9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l9.3,9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l-9.3,9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l9.3,-9.3"></path></svg>
+                    </div>
+
+                    <!-- kada submitacija nije prosla
+                    <div class="progress-button elastic">
+                        <button type="submit" value="Dodaj knjižicu" class="bg-none"><span>Dodaj knjižicu</span></button>
+                        <svg class="progress-circle" width="70" height="70"><path style="stroke-dasharray: 204.243; stroke-dashoffset: 204.243;" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"></path></svg>
+                        <svg class="checkmark" width="63" height="63"><path style="stroke-dasharray: 27.7908; stroke-dashoffset: 27.7908;" d="m31.5,46.5l15.3,-23.2"></path><path style="stroke-dasharray: 11.0752; stroke-dashoffset: 11.0752;" d="m31.5,46.5l-8.5,-7.1"></path></svg>
+                        <svg class="cross" width="63" height="63"><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l-9.3,-9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l9.3,9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l-9.3,9.3"></path><path style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;" d="m35,35l9.3,-9.3"></path></svg>
+                    </div>
+                    -->
+                </div>
+                </form>
+            </div>
+            <!-- END ZDRAVSTVENE KNJIZICE - DODAJ KNJIZICU -->
+            
+        </div>
+        <!-- end hidden forms for right modals -->
+        
+        
+        
+        
+        <!-- centered modals -->
+            
+        <!-- JEDNA FAKTURA - STAMPAJ FAKTURU -->
+        <div id="stampaj-fakturu" class="easy-modal">
+            <article>
+                <h2>Štampaj fakturu</h2>
+                <p>Stampanjem fakture ona postaje zvanicna i belezi se u vasu KPO knjigu. Da li ste sigurni da zelite da nastavite?</p>
+            </article>
+            <div class="modals-buttons">
+                <button type="submit" value="Da">Da</button>
+                <button class="modal-cancel">Ne</button>
+            </div>
+        </div>
+        <!-- end JEDNA FAKTURA - STAMPAJ FAKTURU -->            
+
+        <!-- NALOZI ZA PRENOS - PAUSALNI NALOZI ZA PRENOS -->
+        <div id="pausalni-nalozi-za-prenos" class="easy-modal uplatnica">
+            <div class="title-close">
+                <h2>Doprinos za PIO</h2>
+                <a href="#" class="modal-cancel modal-cancel-icon"></a>
+            </div>
+            <ul>
+                <li>
+                    <div class="input-upl">
+                        <span>Dužnik - nalogodavac</span>
+                        <strong>Vladimir Babic PR Agencija za racunarsko programiranje UNDERCUT DESIGN</strong>
+                    </div>
+                    <div class="input-upl">
+                        <span>Svrha plaćanja</span>
+                        <strong>Uplata na račun</strong>
+                    </div>
+                    <div class="input-upl">
+                        <span>Poverilac - primalac</span>
+                        <strong>Vladimir Babic PR Agencija za racunarsko programiranje UNDERCUT DESIGN</strong>
+                    </div>
+                </li>
+                <li>
+                    <div class="input-upl">
+                        <div>
+                            <span>Sifra plaćana</span>
+                            <strong>921</strong>
+                        </div>
+                        <div>
+                            <span>Valuta</span>
+                            <strong>RSD</strong>
+                        </div>
+                        <div>
+                            <span>Iznos</span>
+                            <strong>12.000,00</strong>
+                        </div>
+                    </div>
+                    <div class="input-upl">
+                        <span>Račun dužnika</span>
+                        <strong>398210938102</strong>
+                    </div>
+                    <div class="input-upl">
+                        <span>Model i poziv na broj (zaduženje)</span>
+                        <strong>398210938102</strong>
+                    </div>
+                    <div class="input-upl">
+                        <span>Račun poverioca - primaoca</span>
+                        <strong>398210938102</strong>
+                    </div>
+                    <div class="input-upl">
+                        <span>Model i poziv na broj (odobrenje)</span>
+                        <strong>398210938102</strong>
+                    </div>
+                </li>
+            </ul>
+            <div class="progress-button">
+                <button type="submit" value="Zatvori" class="bg-none modal-cancel"><span>Zatvori</span></button>
+            </div>
+        </div>
+        <!-- end NALOZI ZA PRENOS - PAUSALNI NALOZI ZA PRENOS -->
+        
+        <!-- NALOZI ZA PRENOS - da / Popuni stavke i Upload resenja -->
+        <div id="generisanje-naloga-za-prenos" class="easy-modal">
+            <article class="two">
+                <h2>Odlično!</h2>
+            </article>
+            <div id="tabs-container">
+                <ul class="tabs-menu">
+                    <li class="current"><a href="#tab-1">Popuni stavke sa rešenja</a></li>
+                    <li><a href="#tab-2">Pomoć oko unosa rešenja</a></li>
+                </ul>
+                <div class="tab">
+                    <div id="tab-1" class="tab-content">
+                        <p>Molimo vas prepišite sledeće stavke sa vašeg poreskog rešenja.</p>
+                        <ul class="profile-forms">
+                            <li>
+                                <label for="doprinos-za-pio">Doprinos za PIO</label>
+                                <input id="doprinos-za-pio" type="text" name="doprinos-za-pio" value="" />
+                            </li>
+                            <li>
+                                <label for="doprinos-za-zdravstveno">Doprinos za zdravstveno osiguranje</label>
+                                <input id="doprinos-za-zdravstveno" type="text" name="doprinos-za-zdravstveno" value="" />
+                            </li>
+                            <li>
+                                <label for="doprinos-za-nezaposlene">Doprinos za osiguranje nezaposlenih</label>
+                                <input id="doprinos-za-nezaposlene" type="text" name="doprinos-za-nezaposlene" value="" />
+                            </li>
+                            <li>
+                                <label for="porez-za-prihode">Porez za prihode od samostalne delatnosti</label>
+                                <input id="porez-za-prihode" type="text" name="porez-za-prihode" value="" />
+                            </li>
+                        </ul>
+                        <div class="spots">
+                            <span class="active"></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tab-content">
+                        <p>Unos podataka sa vašeg uploadovanog rešenja se radi ručno. Molimo vas imajte strpljenja do 24h dok se pojave vaše uplatnice.</p>
+                        <div class="modal-form-upload">
+                            <form action="/" class="dropzone"></form>
+                        </div>
+                        <div class="spots">
+                            <span></span>
+                            <span class="active"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modals-buttons">
+                <button class="long-button" type="submit" value="Generiši naloge za prenos">Generiši naloge za prenos</button>    
+            </div>
+        </div>
+        <!-- end NALOZI ZA PRENOS - da / Popuni stavke i Upload resenja -->
+        
+        <!-- NALOZI ZA PRENOS - Poresko resenje DA NE -->
+        <div id="da-li-ste-dobili-poresko-resenje" class="easy-modal">
+            <article>
+                <img src="images/content/pictograms/letter.png" alt="" />
+                <h2>Da li ste dobili poresko resenje?</h2>
+                <p>Zahvaljujuci azurnosti i vrednom radu ljudi koji rade u poreskoj upravi vase poresko resenje ponekad cekate i do godinu dana.</p>
+            </article>
+            <div class="modals-buttons">
+                <button type="submit" value="Ne">Ne</button>
+                <button type="submit" class="lighter" value="Da">Da</button>
+            </div>
+        </div>
+        <!-- end NALOZI ZA PRENOS - Poresko resenje DA NE -->
+        
+        <!-- NALOZI ZA PRENOS - Poresko resenje NE -->
+        <div id="da-li-ste-dobili-poresko-resenje-ne" class="easy-modal">
+            <article>
+                <img src="images/content/pictograms/stick.png" alt="" />
+                <h2>Ne? Baš čudno ...</h2>
+                <p>Nema mesta za paniku, mi ćemo vam izgenerisati minimalne uplatnice za vašu šifru delatnosti.</p>
+            </article>
+            <div class="modals-buttons">
+                <button class="long-button" type="submit" value="Generiši naloge za prenos">OK</button>
+            </div>
+        </div>
+        <!-- end NALOZI ZA PRENOS - Poresko resenje NE -->
+        
+        <!-- ZDRAVSTVENE KNJIZICE - BRISANJE -->
+        <div id="brisanje-zdravstvene-knjizice" class="easy-modal">
+            <article>
+                <h2>Brisanje naslov</h2>
+                <p>Neki text vezan za odgovornost o brisanju koji se prostire u dva reda se prostire u dva reda.</p>
+            </article>
+            <div class="modals-buttons">
+                <button type="submit" value="Da">Da</button>
+                <button class="modal-cancel">Ne</button>
+            </div>
+        </div>
+        <!-- end ZDRAVSTVENE KNJIZICE - BRISANJE -->
+        
+    	<!-- end centered modals -->
+        
+        
+        
+        
+        
+        <!-- scripts -->
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
+        <script type="text/javascript" src="js/plugins.js"></script>
+        <script type="text/javascript" src="js/jcf.js"></script>
+        <script type="text/javascript" src="js/colorbox-min.js"></script>
+        <script type="text/javascript" src="js/uiProgressButton.js"></script>
+        <script type="text/javascript" src="js/toggles.min.js"></script>
+        <script type="text/javascript" src="js/dropzone.js"></script>
+        <script type="text/javascript" src="js/zebra_datepicker.js"></script>
+        <link type="text/css" rel="stylesheet" href="css/zebra.css"/>
+        <link type="text/css" rel="stylesheet" href="css/mCustomScrollbar.css"/>
+        <script type="text/javascript" src="js/script.js"></script>
+        <!-- end scripts -->
+        
+    </body>
+        
+</html>

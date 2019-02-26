@@ -1,0 +1,449 @@
+/* inputs */
+.jcf-select, input, textarea {
+    .rounded-corners(2px);
+    border: 1px solid #e7e7e7;
+    background: @baseWhite;
+    height: 34px;
+    padding: 5px 5px 5px 10px;
+    color: @lightGrayTextColor;
+    width: 100px;
+    font-size: 14px;
+}
+
+.jcf-select {
+    padding: 3px 1px 6px 1px;
+    
+    &:hover {
+        border: 1px solid @lightGrayTextColor;
+    }
+}
+
+input, textarea {
+    padding-right: 10px;
+    
+    &:hover, &:focus {
+        border: 1px solid @lightGrayTextColor;
+    }
+}
+
+/* select */
+.jcf-select {
+	position: relative;
+}
+.jcf-select select {
+	z-index: 1;
+	left: 0;
+	top: 0;
+}
+.jcf-select .jcf-select-text {
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	cursor: default;
+	display: block;
+	font-size: 13px;
+	line-height: 26px;
+	margin: 0 10px 0 8px;
+}
+.jcf-select .jcf-select-opener {
+	position: absolute;
+	background: url("@{root}dd-select-arrow.png") no-repeat;
+    background-size: 28px 33px;
+	width: 28px;
+    height: 33px;
+	bottom: 0;
+	right: 0;
+	top: 0;
+}
+body > .jcf-select-drop {
+	position: absolute;
+	margin: -1px 0 0;
+	z-index: 9999;
+}
+body > .jcf-select-drop.jcf-drop-flipped {
+	margin: 1px 0 0;
+}
+.jcf-select .jcf-select-drop {
+	position: absolute;
+	margin-top: 0px;
+	z-index: 9999;
+	top: 100%;
+	left: -1px;
+	right: -1px;
+}
+.jcf-select .jcf-drop-flipped {
+	bottom: 100%;
+	top: auto;
+}
+.jcf-select.jcf-compact-multiple {
+	max-width: 220px;
+}
+.jcf-select.jcf-compact-multiple .jcf-select-opener:before {
+	display: inline-block;
+	padding-top: 2px;
+	content: '...';
+}
+.jcf-select-drop .jcf-select-drop-content {
+	border: 1px solid #f00;
+}
+.jcf-select-drop.jcf-compact-multiple .jcf-hover {
+	background: none;
+}
+.jcf-select-drop.jcf-compact-multiple .jcf-selected {
+	background: #e6e6e6;
+	color: #000;
+}
+.jcf-select-drop.jcf-compact-multiple .jcf-selected:before {
+	display: inline-block;
+	content: '';
+	height:4px;
+	width:8px;
+	margin:-7px 5px 0 -3px;
+	border:3px solid #777;
+	border-width:0 0 3px 3px;
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865483, M12=0.7071067811865467, M21=-0.7071067811865467, M22=0.7071067811865483, SizingMethod='auto expand')";
+}
+
+/* multiple select styles */
+.jcf-list-box {
+	overflow: hidden;
+	display: inline-block;
+	border: 1px solid #b8c3c9;
+	min-width: 200px;
+	margin: 0 15px;
+}
+/* select options styles */
+.jcf-list {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	background: #fff;
+	line-height: 14px;
+	font-size: 12px;
+	width: 100%;
+}
+.jcf-list .jcf-list-content {
+	vertical-align: top;
+	display: inline-block;
+	overflow: auto;
+	width: 100%;
+}
+.jcf-list ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.jcf-list ul li {
+	overflow: hidden;
+	display: block;
+}
+.jcf-list .jcf-overflow {
+	overflow: auto;
+}
+.jcf-list .jcf-option {
+	white-space: nowrap;
+	overflow: hidden;
+	cursor: default;
+	display: block;
+	padding: 5px 9px;
+	color: #656565;
+	min-height: 14px;
+	height: 1%;
+}
+.jcf-list .jcf-disabled {
+	background: #fff !important;
+	color: #aaa !important;
+}
+.jcf-select-drop .jcf-hover,
+.jcf-list-box .jcf-selected {
+	background: #e6e6e6;
+	color: #000;
+}
+.jcf-list .jcf-optgroup-caption {
+	white-space: nowrap;
+	font-weight: bold;
+	display: block;
+	padding: 5px 9px;
+	cursor: default;
+	color: #000;
+}
+.jcf-list .jcf-optgroup .jcf-option {
+	padding-left: 30px;
+}
+
+.jcf-select-drop .jcf-select-drop-content { 
+    border: 0 !important;
+    display: block !important;
+}
+.jcf-select-drop .jcf-select-drop-content, 
+.jcf-select-drop .jcf-select-drop-content ul, 
+.jcf-select-drop .jcf-select-drop-content li, 
+.jcf-select-drop .jcf-select-drop-content span { 
+    display: block !important;
+}
+
+.jcf-select-drop .jcf-select-drop-content ul { 
+    padding: 0 10px;
+}
+
+.jcf-select-drop .jcf-select-drop-content li { 
+    border-bottom: 1px solid #e7e7e7;
+    padding: 0;
+    
+    span {
+        font-size: 16px !important;
+        background: none !important;
+        padding: 14px 0;
+        color: @lightGrayTextColor;
+        
+        &:hover {
+            color: @purpleTextColor;
+        }
+    }
+    
+    &:last-child {
+        border-bottom: 0;
+    }
+}
+
+.jcf-drop-active {
+    border: 1px solid #fff !important;
+}
+
+.jcf-select-text span {
+    font-size: 14px !important;
+}
+
+.jcf-select-drop {
+    .box-shadow(0 0 3px 3px #eee);
+}
+
+/*
+
+/* SUBMIT BUTTONS */
+
+/* Button container */
+.progress-button {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	width: 45%;
+	min-width: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Button style */
+.progress-button button {
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	width: 200px;
+	height: 64px;
+	border: 2px solid #7683ce;
+	border-radius: 40px;
+	background: #7683ce;
+	color: #fff;
+	font-size: 14px;
+    text-transform: uppercase;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+	transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+}
+
+.progress-button.right-block {
+    min-width: 130px;
+    float: none !important;
+    margin: 0;
+    position: absolute;
+    right: 30px;
+}
+.progress-button.right-block,
+.progress-button.right-block button {
+    width: 130px;
+}
+
+.progress-button.top-block {
+    margin-top: -68px;
+}
+
+.progress-button button:hover {
+	background-color: #9ba5db;
+    border: 2px solid #9ba5db;
+	color: #fff;
+}
+
+.progress-button button:focus {
+	outline: none;
+}
+
+/* Text (transition for when returning to initial state) */
+.progress-button button span {
+	-webkit-transition: opacity 0.3s 0.1s;
+	transition: opacity 0.3s 0.1s;
+}
+
+/* Common style of SVGs */
+.progress-button svg {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	pointer-events: none;
+}
+
+.progress-button svg path {
+	opacity: 0;
+	fill: none;
+}
+
+.progress-button svg.progress-circle path {
+	stroke: #6879de;
+	stroke-width: 2;
+}
+
+.progress-button svg.checkmark path,
+.progress-button svg.cross path {
+	stroke: #fff;
+	stroke-linecap: round;
+	stroke-width: 2;
+	-webkit-transition: opacity 0.1s;
+	transition: opacity 0.1s;
+}
+
+.progress-button svg.checkmark {
+
+}
+
+.progress-button svg.progress-circle {
+    margin-top: -1px;
+}
+
+/* Loading, success and error effects */
+.loading.progress-button button {
+	width: 64px; /* make a circle */
+    height: 64px;
+	border-width: 2px;
+	border-color: #ddd;
+	background-color: transparent;
+	color: #fff;
+}
+
+.loading.progress-button span {
+	-webkit-transition: opacity 0.15s;
+	transition: opacity 0.15s;
+}
+
+.loading.progress-button span,
+.success.progress-button span,
+.error.progress-button span {
+	opacity: 0; /* keep it hidden in all states */
+}
+
+.success.progress-button button,
+.error.progress-button button {
+	-webkit-transition: background-color 0.3s, width 0.3s, border-width 0.3s;
+	transition: background-color 0.3s, width 0.3s, border-width 0.3s;
+}
+
+.success.progress-button button {
+	border-color: #7683ce;
+	background-color: #7683ce;
+}
+
+.error.progress-button button {
+	border-color: #FB797E;
+	background-color: #FB797E;
+}
+
+.loading.progress-button svg.progress-circle path,
+.success.progress-button svg.checkmark path,
+.error.progress-button svg.cross path {
+	opacity: 1;
+	-webkit-transition: stroke-dashoffset 0.3s;
+	transition: stroke-dashoffset 0.3s;
+}
+
+/* Optional elastic effect for the width of the button */
+.elastic.progress-button button {
+	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.25, 0.25, 0.4, 1), border-width 0.3s, border-color 0.3s;
+	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.25, 0.25, 0.4, 1.6), border-width 0.3s, border-color 0.3s;
+	transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.25, 0.25, 0.4, 1.6), border-width 0.3s, border-color 0.3s;
+}
+
+.loading.elastic.progress-button button {
+	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.6, 0, 0.75, 0.75), border-width 0.3s, border-color 0.3s;
+	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.6, -0.6, 0.75, 0.75), border-width 0.3s, border-color 0.3s;
+	transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.6, -0.6, 0.75, 0.75), border-width 0.3s, border-color 0.3s;
+}
+
+
+/* checkbox and radio */
+.jcf-checkbox, .jcf-radio {
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	cursor: default;
+	background: #fff;
+	border: 1px solid #c8d0d9;
+	margin: 0 3px 0 0;
+	height: 16px;
+	width: 16px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow:inset 0 0 2px 2px #f2f2f2;
+    box-shadow:inset 0 0 2px 2px #f2f2f2;
+    -moz-box-shadow:inset 0 0 2px 2px #f2f2f2;
+}
+.jcf-radio {
+    border-radius: 16px;
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+}
+.jcf-checkbox span, .jcf-radio span {
+	position:absolute;
+	display:none;
+	height:4px;
+	width:8px;
+	top:50%;
+	left:50%;
+	border:3px solid #7683ce;
+	border-width:0 0 3px 3px;
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865483, M12=0.7071067811865467, M21=-0.7071067811865467, M22=0.7071067811865483, SizingMethod='auto expand')";
+}
+.jcf-radio span {
+	margin:-4px 0 0 -5px;
+}
+:root .jcf-checkbox span {margin:-4px 0 0 -5px;}
+.jcf-checkbox input[type="checkbox"] {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	margin: 0;
+	left: 0;
+	top: 0;
+}
+.jcf-checkbox.jcf-checked span{display:block;}
+
+.jcf-radio input[type="radio"] {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	border: 0;
+	margin: 0;
+	left: 0;
+	top: 0;
+}
+.jcf-radio.jcf-checked span {display:block;}
