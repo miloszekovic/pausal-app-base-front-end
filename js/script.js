@@ -4,59 +4,49 @@ $(document).ready(function() {
   $('.mobile-toggle').click(function() {
 	$('nav').toggle(1);
 	$(this).toggleClass("mobile-toggle-sel");
-	return false;
   });
     
   $('.gear-icon').click(function() {
 	$('.top-menu').toggle(1);
 	$(this).toggleClass("fa-cog-sel");
-	return false;
   });
   $('.top-menu').mouseleave(function() {
 	$('.top-menu').fadeOut('fast');
 	$('.gear-wrapp a i').removeClass("fa-cog-sel");
-	return false;
   });
     
   $('.bfakt').click(function() {
 	$('.nova-fakt').toggle(1);
 	$(this).toggleClass("bfakt-sel");
-	return false;
   });
   $('.nova-fakt').mouseleave(function() {
 	$('.nova-fakt').fadeOut('fast');
 	$('.button').removeClass("bfakt-sel");
-	return false;
   });
     
   $('.icon-spots').click(function() {
     $(this).closest(".icon-wrapp").find('.icon-wrapp-dd').toggle();
     $(this).toggleClass("fa-ellipsis-active");
-	return false;
   });
     
   $('.bars-grid').click(function() {
 	$('.fakts').addClass('grid');
     $('.bars-list').removeClass('active');
     $(this).addClass('active');
-	return false;
   });
   $('.bars-list').click(function() {
 	$('.fakts').removeClass('grid');
     $('.bars-grid').removeClass('active');
     $(this).addClass('active');
-	return false;
   });
     
   $('.zdrv-settings a').click(function() {
     $(this).closest(".zdravstvene li article").find('.zdrv-dd-menu').toggle();
     $(this).toggleClass("fa-ellipsis-active");
-	return false;
   });
     
   $('.modal-cancel').click(function() {
 	$('.lean-overlay, .easy-modal').fadeOut('fast');
-	return false;
   });
     
   // tip
